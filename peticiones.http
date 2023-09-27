@@ -1,0 +1,25 @@
+### trear todas las tareas
+GET http://localhost:3000/api/tasks
+
+### crear tareas
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+    {
+        "title": "sexta title",
+        "description": "sexta descriptionPelicula Animada",
+        "poster": "https://th.bing.com/th/id/OIP.2Jm0k2BthrIoq-K3DWsLiQHaLH?w=195&h=292&c=7&r=0&o=5&pid=1.7"
+    }
+
+### Modificar tarea
+PUT http://localhost:3000/api/tasks/2
+Content-Type: application/json
+
+    {
+        "title": 22,
+        "description": "viaja a Brasil",
+        "poster": "hola"
+    }
+
+###Eliminar tarea
+DELETE http://localhost:3000/api/tasks/1

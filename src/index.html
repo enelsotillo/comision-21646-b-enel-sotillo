@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forums</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="d-flex justify-content-center">
+        <h1>Forums</h1>
+    </header>
+    <main class="d-flex align-items-center flex-column">
+        <button type="button" class="btn btn-primary mb-3" id="btn-new-forum">New Forum</button>
+        <!--columna-->
+        <div class="container text-center">
+            <div class="row" id="container-row">
+
+                <!--   <div class="col-4 d-flex justify-content-center mb-3">
+                    Forums
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://th.bing.com/th/id/OIP.LPgQTtpqPhC_J4-D4a7jIQHaD6?w=195&h=103&c=7&r=0&o=5&pid=1.7"
+                            class="card-img-top" alt="nueva foto">
+                        <div class="card-body">
+                            <h5 class="card-title">nuevo title</h5>
+                            <p class="card-text">nueva description</p>
+                            <a href="#" class="btn btn-primary">Edif</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+        </div>
+
+        <!--model-->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Forum</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="inputTitle" id="inputTitle" class="col-form-label">title:</label>
+                                <input type="text" class="form-control" id="inputTitle">
+                            </div>
+                            <div class="mb-3">
+                                <label for="iputDescription" id="iputDescription"
+                                    class="col-form-label">desciption:</label>
+                                <input type="text" class="form-control" id="inputDescription">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputPoster" id="inputPoster" class="col-form-label">poster:</label>
+                                <input type="text" class="form-control" id="inputPoster">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="btn-save">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
