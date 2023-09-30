@@ -1,0 +1,20 @@
+<%- include('partials/header') -%>
+        <h1>Desde EJS</h1>
+      
+     <h1>
+        <%= title %>
+     </h1>
+     <p>
+
+        <% alumnos.forEach(alumno => { %>
+            <ul>
+                <li><%= alumno.nombre %></li>
+                <li><%= alumno.apellido %></li>
+            </ul>
+       <% }) %>
+
+     </p>
+
+     <%- include('partials/footer') -%>
+
+     

@@ -1,8 +1,11 @@
 import { Router } from "express";
-import { ctrolDeleteTask, ctrolGetTasks, ctrolPustTask, ctrolPutTask } from "../controllers/task.controllers.js";
+import { ctrolDeleteTask, ctrolGetTasks, ctrolPustTask, ctrolPutTask, ctrolView } from "../controllers/task.controllers.js";
 export const taskRouter = Router();
 import { crearTaskSchema, editTaskSchema } from "../model.table/schemas.tasks.js";
 import { validator } from "../middlewares/validar.js";
+
+//Ruta vista
+taskRouter.get('/tasks', ctrolView )
 
 //endpoint para todas las tareas
 taskRouter.get('/api/tasks', ctrolGetTasks )
