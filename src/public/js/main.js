@@ -1,3 +1,5 @@
+
+
 const contenedor = document.getElementById('container-row');
 const btnCrearForum = document.getElementById('btn-new-forum');
 const myModal = new bootstrap.Modal(document.getElementById('myModal'));
@@ -24,9 +26,8 @@ btnCrearForum.addEventListener('click', () => {
 document.addEventListener('click', (event) => {
     if (event.target.matches('#btn-delete')) {
         const article = event.target.closest('.col-4')
-        const idArticle = article.dataset.id
+        const idArticle = article.dataset.id;
         console.log(idArticle);
-
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -54,9 +55,6 @@ document.addEventListener('click', (event) => {
                 )
             }
         })
-
-
-
     }
 })
 
@@ -146,9 +144,7 @@ form.addEventListener('submit', (event) => {
     }
 
 })
-
 /*
-//se paso directamente sobre el html con EJS
 fetch('http://localhost:3000/api/tasks')
     .then(res => res.json())
     .then(data => {

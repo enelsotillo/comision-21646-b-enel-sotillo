@@ -19,7 +19,7 @@ const alumnos = [
 ]
 */
 /*
-//controllers view
+//controllers ejemplo para mostrar la vista view
 export const ctrolEjemplo = (req, res) => {
    res.render('index.ejs', { title: "ahora titulos desde ejs", alumnos })
 }
@@ -28,17 +28,15 @@ export const ctrolEjemplo = (req, res) => {
 export const ctrolView = async (req, res) => {
    try {
       const tasks = await taskModel.findAll();
-      res.render('tasks.ejs', {tasks})
-
+      return res.render('tasks.ejs', {tasks});
    } catch (error) {
       console.error(error)
       return res.status(500).json({
-         message: 'error servidor'
+         message: 'error del servidor'
       })
    }
-
 }
-
+/*
 //controlador para todas las tareas
 export const ctrolGetTasks = async (req, res) => {
    try {
@@ -52,7 +50,7 @@ export const ctrolGetTasks = async (req, res) => {
       })
    }
 }
-
+*/
 //controlador pust para crear tarea
 export const ctrolPustTask = async (req, res) => {
    try {
