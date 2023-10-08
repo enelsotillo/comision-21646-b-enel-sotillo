@@ -1,8 +1,9 @@
 import { Sequelize } from "sequelize";
+//const db_foros = process.env.DB_TABLE;
 
-export const sequelize = new Sequelize('db_foros', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql'
+export const sequelize = new Sequelize("db_foros","root", "", {
+    host: "localhost",
+    dialect: "mysql",
   });
 
  export const startDb = async () => {
@@ -15,3 +16,4 @@ export const sequelize = new Sequelize('db_foros', 'root', '', {
         console.error('Unable to connect to the database:', error);
       }
   }
+  

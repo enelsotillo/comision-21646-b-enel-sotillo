@@ -6,6 +6,7 @@
         <button type="button" class="btn btn-primary mb-3" id="btn-new-forum">New Forum</button>
         <!--columna-->
         <div class="container text-center">
+
             <div class="row" id="container-row">
 
                 <% tasks.forEach(task=> { %>
@@ -14,10 +15,13 @@
                         <div class="card" style="width: 18rem;">
                             <img src="<%= task.poster %>" class="card-img-top" alt="nueva foto">
                             <div class="card-body">
-                                <h5 class="card-title">
+                                <h5 class="card-title titulo">Titulo:
                                     <%= task.title %></h5>
-                                <p class="card-text">
+                                <p class="card-text descrip">Descripción:
                                     <%= task.description %>
+                                </p>
+                                <p class="card-text fechaa">Fecha:
+                                    <%= new Date(task.createdAt).toLocaleDateString() %>
                                 </p>
                                 <a href="#" class="btn btn-primary" id="btn-edif">Edif</a>
                                 <a href="#" class="btn btn-danger" id="btn-delete">Delete</a>
