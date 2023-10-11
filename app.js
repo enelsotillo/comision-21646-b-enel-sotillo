@@ -8,6 +8,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import "dotenv/config";
 
+
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 console.log(__dirname)
@@ -36,6 +37,7 @@ app.get('/', (req, res) =>{
 })
 
 app.listen(port, () =>{
-    console.log(`server express http://localhost:${port}`)
+    console.log(`server express http://localhost:${port}/tasks`)
     startDb();
 })
+        
