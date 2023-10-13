@@ -8,6 +8,7 @@ export const sequelize = new Sequelize(process.env.DB_NAME,process.env.DB_USER, 
 
  export const startDb = async () => {
     try {
+       //para prueba de error
         console.log(process.env.DB_NAME)
         console.log(process.env.DB_HOST)
         console.log(process.env.DB_USER)

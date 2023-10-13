@@ -1,15 +1,17 @@
-
-
+//Modulo mas importante del proyecto
+//capta los registro o datos contenedores y formulario
 const contenedor = document.getElementById('container-row');
 const btnCrearForum = document.getElementById('btn-new-forum');
 const myModal = new bootstrap.Modal(document.getElementById('myModal'));
 const btnSave = document.getElementById('btn-save');
 const form = document.getElementById('formulario');
 
+//variables globales
 let html = ''
 let option = ''
 let idForm = ''
 
+//capta los registros del formulario
 const inputTitle = document.getElementById('inputTitle')
 const inputDescription = document.getElementById('inputDescription')
 const inputPoster = document.getElementById('inputPoster')
@@ -23,6 +25,7 @@ btnCrearForum.addEventListener('click', () => {
     myModal.show()
 })
 
+//funcion para eliminar los registros del foro
 document.addEventListener('click', (event) => {
     if (event.target.matches('#btn-delete')) {
         const article = event.target.closest('.col-4')
@@ -58,29 +61,7 @@ document.addEventListener('click', (event) => {
     }
 })
 
-/*
-document.addEventListener('click', (event) =>{
-if(event.target.matches('#btn-delete')){
- const article = event.target.closest('.col-4')
- const idArticle = article.dataset.id
- console.log(idArticle);
-
- fetch(`http://localhost:3000/api/tasks/${idArticle}`,{
-     method: 'DELETE'
-
- }). then(res => {
-     if(res.ok){
-         article.remove()
-     }
- }).catch(err =>{
-      console.log(err)
- })
-
-}
-})
-//console.log(contenedor);
-*/
-
+//funciona capta los registro del formulario para actualizar
 document.addEventListener('click', (event) => {
     if (event.target.matches('#btn-edif')) {
         const article = event.target.closest('.col-4')
@@ -100,6 +81,7 @@ document.addEventListener('click', (event) => {
     }
 })
 
+//funcion que crea un nuevo foro
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -123,6 +105,8 @@ form.addEventListener('submit', (event) => {
             }
         });
     }
+
+    //funciona que actualiza un foro y guarda los cambios
     if (option === "edif") {
         const taskNew = {
             title: inputTitle.value,
@@ -144,26 +128,3 @@ form.addEventListener('submit', (event) => {
     }
 
 })
-/*
-fetch('http://localhost:3000/api/tasks')
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(task => {
-            html += `
-         <article class="col-4 d-flex justify-content-center mb-3" data-id="${task.id}">
-                    <div class="card" style="width: 18rem;">
-                        <img class="imgPoster" src="${task.poster}"
-                            class="card-img-top" alt="nueva foto">
-                        <div class="card-body">
-                            <h5 class="card-title">${task.title}</h5>
-                            <p class="card-text">${task.description}</p>
-                            <a href="#" class="btn btn-primary" id="btn-edif">Edif</a>
-                            <a href="#" class="btn btn-danger" id="btn-delete">Delete</a>
-                        </div>
-                    </div>
-                </article>
-         `
-            contenedor.innerHTML = html;
-        });
-    })
-*/
